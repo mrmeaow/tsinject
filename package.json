@@ -1,0 +1,81 @@
+{
+  "name": "tsneedle",
+  "version": "0.1.0",
+  "description": "A sharp, modern, lightweight dependency injection container for TypeScript — ESM + CJS, zero dependencies, runtime-agnostic",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./reflect": {
+      "types": "./dist/reflect.d.ts",
+      "import": "./dist/reflect.js",
+      "require": "./dist/reflect.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "reflect-metadata": ">=0.2.0",
+    "typescript": ">=5.2.0"
+  },
+  "peerDependenciesMeta": {
+    "reflect-metadata": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "husky": "^9.1.7",
+    "jsr": "^0.14.3",
+    "publint": "^0.2.0",
+    "reflect-metadata": "^0.2.2",
+    "release-please": "^17.5.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "check:exports": "publint",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "di",
+    "dependency injection",
+    "ioc",
+    "inversion of control",
+    "typescript",
+    "esm",
+    "cjs",
+    "container",
+    "injectable",
+    "decorator",
+    "lightweight"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrmeaow/tsneedle"
+  }
+}

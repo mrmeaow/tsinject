@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.pnpm-debug.log
+*.tsbuildinfo
+.DS_Store
+coverage/
+.vscode/
+.idea/
+*.log

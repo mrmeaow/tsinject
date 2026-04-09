@@ -33,6 +33,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build
+        run: pnpm build
+
       - name: TypeScript check
         run: pnpm typecheck
 
@@ -41,9 +44,6 @@ jobs:
 
       - name: Test
         run: pnpm test:coverage
-
-      - name: Build
-        run: pnpm build
 
       - name: Check exports
         run: pnpm check:exports

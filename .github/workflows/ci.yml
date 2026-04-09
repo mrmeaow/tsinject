@@ -103,9 +103,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to JSR (dev)
-        run: pnpm dlx jsr publish --yes --no-provenance
-        env:
-          JSR_TOKEN: ${{ secrets.JSR_TOKEN }}
+        run: npx jsr publish
 
       - name: Publish to npm (dev)
         run: npm publish --tag dev --access public
@@ -143,9 +141,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to JSR (next)
-        run: pnpm dlx jsr publish --yes --no-provenance
-        env:
-          JSR_TOKEN: ${{ secrets.JSR_TOKEN }}
+        run: npx jsr publish
 
       - name: Publish to npm (next)
         run: npm publish --tag next --access public
@@ -183,9 +179,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to JSR (stable)
-        run: pnpm dlx jsr publish --yes --no-provenance
-        env:
-          JSR_TOKEN: ${{ secrets.JSR_TOKEN }}
+        run: npx jsr publish
 
       - name: Publish to npm (stable)
         run: npm publish --access public

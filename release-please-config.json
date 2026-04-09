@@ -1,0 +1,16 @@
+{
+  "release-type": "node",
+  "packages": {
+    ".": {
+      "package-name": "tsneedle"
+    }
+  },
+  "changelog-path": "CHANGELOG.md",
+  "separate-pull-requests": true,
+  "include-component-in-tag": false,
+  "includeVInTag": false,
+  "prereleases": {
+    "next": ["next"],
+    "dev": ["dev"]
+  }
+}

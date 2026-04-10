@@ -1,17 +1,1 @@
-{
-  "name": "@mrmeaow/tsinject",
-  "version": "1.0.0",
-  "exports": "./dist/index.js",
-  "publish": {
-    "include": ["dist", "LICENSE", "README.md"]
-  },
-  "dependencies": {
-    "reflect-metadata": "npm:reflect-metadata@^0.2.0"
-  },
-  "devDependencies": {
-    "typescript": "npm:typescript@^5.2.0"
-  },
-  "imports": {
-    "reflect-metadata": "npm:reflect-metadata@^0.2.0"
-  }
-}
+{ "name": "@mrmeaow/tsinject", "version": "1.0.1", "exports": "./dist/index.js", "publish": { "include": ["dist", "LICENSE", "README.md"] } }

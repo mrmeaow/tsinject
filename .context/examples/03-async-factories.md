@@ -3,7 +3,7 @@
 Illustrates a provider whose factory returns a `Promise`. Use `resolveAsync` to obtain the instance.
 
 ```typescript
-import { Container, createToken, injectable } from 'tsneedle';
+import { Container, createToken, injectable } from 'tsinject';
 
 // Token for an async‑initialized service
 export interface IDataSource {

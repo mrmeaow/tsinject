@@ -1,5 +1,5 @@
-import { Container, Lifecycle, createToken } from "tsneedle";
-import type { Token } from "tsneedle";
+import { Container, Lifecycle, createToken } from "@mrmeaow/tsinject";
+import type { Token } from "@mrmeaow/tsinject";
 
 interface IRepo {
   find(): string;

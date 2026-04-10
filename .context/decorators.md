@@ -1,6 +1,6 @@
 # Decorator API
 
-tsneedle’s decorators rely on **Stage 3** TypeScript decorators and `Symbol.metadata`. They require **TypeScript ≥ 5.2**.
+tsinject’s decorators rely on **Stage 3** TypeScript decorators and `Symbol.metadata`. They require **TypeScript ≥ 5.2**.
 
 ---
 
@@ -39,7 +39,7 @@ class RequestContext {}
 ## Parameter decorators (constructor)
 
 ### `@inject(Token)`
-Explicitly specify which token should be injected into a constructor parameter. Required for interface‑typed parameters because tsneedle never uses `reflect-metadata` by default.
+Explicitly specify which token should be injected into a constructor parameter. Required for interface‑typed parameters because tsinject never uses `reflect-metadata` by default.
 
 ```typescript
 @injectable()

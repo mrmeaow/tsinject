@@ -1,10 +1,10 @@
-# tsneedle
+# tsinject
 
 <p>
-  <a href="https://www.npmjs.com/package/tsneedle"><img src="https://img.shields.io/npm/v/tsneedle.svg" alt="npm version" /></a>
-  <a href="https://jsr.io/@tsneedle/tsneedle"><img src="https://img.shields.io/jsr/v/@tsneedle/tsneedle" alt="JSR version" /></a>
-  <a href="https://github.com/mrmeaow/tsneedle/actions/workflows/ci.yml"><img src="https://github.com/mrmeaow/tsneedle/actions/workflows/ci.yml/badge.svg" alt="CI status" /></a>
-  <a href="https://coveralls.io/github/mrmeaow/tsneedle?branch=main"><img src="https://coveralls.io/repos/github/mrmeaow/tsneedle/badge.svg?branch=main" alt="Coverage" /></a>
+  <a href="https://www.npmjs.com/package/tsinject"><img src="https://img.shields.io/npm/v/@mrmeaow/tsinject.svg" alt="npm version" /></a>
+  <a href="https://jsr.io/@mrmeaow/tsinject"><img src="https://img.shields.io/jsr/v/@tsinject/tsinject" alt="JSR version" /></a>
+  <a href="https://github.com/mrmeaow/tsinject/actions/workflows/ci.yml"><img src="https://github.com/mrmeaow/tsinject/actions/workflows/ci.yml/badge.svg" alt="CI status" /></a>
+  <a href="https://coveralls.io/github/mrmeaow/tsinject?branch=main"><img src="https://coveralls.io/repos/github/mrmeaow/tsinject/badge.svg?branch=main" alt="Coverage" /></a>
 </p>
 
 A sharp, modern, lightweight dependency injection container for TypeScript. Zero runtime dependencies, ESM + CJS support, and strong type safety.
@@ -24,9 +24,9 @@ A sharp, modern, lightweight dependency injection container for TypeScript. Zero
 ## Install
 
 ```bash
-npm install tsneedle
+npm install @mrmeaow/tsinject
 # or
-pnpm add tsneedle
+pnpm add @mrmeaow/tsinject
 ```
 
 For reflect-metadata integration (optional):
@@ -38,7 +38,7 @@ npm install reflect-metadata
 ## Quick Start
 
 ```typescript
-import { Container, createToken, injectable, inject } from 'tsneedle';
+import { Container, createToken, injectable, inject } from '@mrmeaow/tsinject';;
 
 // Define tokens
 interface ILogger {
@@ -59,13 +59,13 @@ const container = new Container();
 container.registerClass(ILogger, ConsoleLogger);
 
 const logger = container.resolve(ILogger);
-logger.log('Hello tsneedle');
+logger.log('Hello tsinject');
 ```
 
 ## Lifecycle
 
 ```typescript
-import { Lifecycle } from 'tsneedle';
+import { Container, createToken, injectable, inject } from '@mrmeaow/tsinject';;
 
 // Transient (default) - new instance each time
 container.registerClass(Token, MyService);
@@ -95,7 +95,7 @@ const svc2 = request2.resolve(Token);
 ## Modules
 
 ```typescript
-import { defineModule, createToken } from 'tsneedle';
+import { Container, createToken, injectable, inject } from '@mrmeaow/tsinject';;
 
 const module = defineModule({
   providers: [
@@ -156,15 +156,19 @@ const instance = await container.resolveAsync(Token);
 
 ## Comparison
 
-| Feature | tsneedle | tsyringe | InversifyJS |
-|---------|----------|----------|-------------|
-| Runtime deps | 0 | 0 | 0 |
+| Feature | @mrmeaow/tsinject | tsyringe | InversifyJS |
+|---------|-------------------|----------|-------------|
+| Runtime deps | 0 | 1 (tslib) | 3+ (@inversifyjs/*) |
 | Decorator-based | ✅ | ✅ | ✅ |
-| ESM + CJS | ✅ | CJS only | ESM only |
-| Async resolution | ✅ | ✅ | ✅ |
+| ESM + CJS | ✅ | CJS + ESM¹ | v7: ✅ / v8: ESM only |
+| reflect-metadata | optional (peer) | required | required (peer)² |
+| Async resolution | ✅ | ❌ | ✅ (v7+) |
 | Scopes | ✅ | ✅ | ✅ |
-| Modules | ✅ | ❌ | ❌ |
-| reflect-metadata | optional | required | optional |
+| Modules | ✅ | ❌ | ✅ |
+
+**Footnotes:**
+1. tsyringe is CJS-first with ESM output, but no `"exports"` field
+2. InversifyJS lists it as peerDependency, but decorator usage requires it
 
 ## License
 

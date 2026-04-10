@@ -1,4 +1,4 @@
-import { Lifecycle, type RegisterOptions } from "tsneedle";
+import { Lifecycle, type RegisterOptions } from "@mrmeaow/tsinject";
 import { describe, expect, it } from "vitest";
 
 describe("Lifecycle", () => {

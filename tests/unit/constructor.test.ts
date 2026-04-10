@@ -1,4 +1,4 @@
-import type { Constructor, InstanceOf } from "tsneedle";
+import type { Constructor, InstanceOf } from "@mrmeaow/tsinject";
 import { describe, expect, it } from "vitest";
 
 describe("Constructor Types", () => {

@@ -1,10 +1,10 @@
 # Example 05 – Testing with Mocks
 
-Shows a Vitest unit test that replaces a dependency with a mock implementation using `tsneedle`'s container.
+Shows a Vitest unit test that replaces a dependency with a mock implementation using `tsinject`'s container.
 
 ```typescript
 import { describe, it, expect, vi } from 'vitest';
-import { Container, createToken, injectable } from 'tsneedle';
+import { Container, createToken, injectable } from 'tsinject';
 
 // ==== Production code ==== //
 export interface ILogger { log(msg: string): void; }

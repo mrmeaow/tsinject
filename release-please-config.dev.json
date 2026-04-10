@@ -3,17 +3,18 @@
   "packages": {
     ".": {
       "package-name": "@mrmeaow/tsinject",
-      "changelog-path": "CHANGELOG.md"
+      "changelog-path": "CHANGELOG.md",
+      "prerelease": true,
+      "prerelease-type": "dev",
+      "versioning": "prerelease"
     }
   },
   "changelog-path": "CHANGELOG.md",
   "separate-pull-requests": true,
   "include-component-in-tag": false,
   "includeVInTag": true,
-  "prerelease": false,
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
-  "versioning": "default",
   "changelog-sections": [
     { "type": "feat", "section": "Features" },
     { "type": "fix", "section": "Bug Fixes" },

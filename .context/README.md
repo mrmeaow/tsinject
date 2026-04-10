@@ -1,18 +1,18 @@
-# tsneedle Documentation
+# tsinject Documentation
 
-[![npm version](https://img.shields.io/npm/v/tsneedle.svg)](https://www.npmjs.com/package/tsneedle)
-[![CI status](https://github.com/yourorg/tsneedle/actions/workflows/ci.yml/badge.svg)](https://github.com/yourorg/tsneedle/actions)
+[![npm version](https://img.shields.io/npm/v/tsinject.svg)](https://www.npmjs.com/package/tsinject)
+[![CI status](https://github.com/yourorg/tsinject/actions/workflows/ci.yml/badge.svg)](https://github.com/yourorg/tsinject/actions)
 
-**tsneedle** – A sharp, modern, lightweight dependency injection container for TypeScript.
+**tsinject** – A sharp, modern, lightweight dependency injection container for TypeScript.
 
 ## Install
 
 Both **ESM** and **CommonJS** builds are provided. Node automatically selects the correct entry point based on your project's `type` field.
 
 ```bash
-npm i tsneedle
+npm i tsinject
 # or with pnpm
-pnpm i tsneedle
+pnpm i tsinject
 ```
 
 ## Quick start
@@ -28,7 +28,7 @@ import {
   defineModule,
   postConstruct,
   preDestroy,
-} from 'tsneedle';
+} from 'tsinject';
 
 // Define tokens
 interface ILogger { log(msg: string): void; }
@@ -44,7 +44,7 @@ class ConsoleLogger implements ILogger {
 const container = new Container();
 container.registerClass(ILogger, ConsoleLogger);
 const logger = container.resolve(ILogger);
-logger.log('hello tsneedle');
+logger.log('hello tsinject');
 ```
 
 ## Documentation
@@ -58,7 +58,7 @@ logger.log('hello tsneedle');
 - [Disposal](./disposal.md)
 - [Migrating from tsyringe](./migrating-from-tsyringe.md)
 - [Migrating from inversify](./migrating-from-inversify.md)
-- [Comparison: tsneedle vs tsyringe vs InversifyJS](./comparison.md)
+- [Comparison: tsinject vs tsyringe vs InversifyJS](./comparison.md)
 
 ## Examples
 

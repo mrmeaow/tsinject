@@ -1,13 +1,13 @@
 import type { InjectableMeta } from "../decorators/injectable.js";
 import type { Constructor } from "../utils/constructor.js";
 
-const INJECTABLE_META = Symbol("tsneedle:injectable");
-const PARAMS_META = Symbol("tsneedle:params");
-const OPTIONAL_PARAMS = Symbol("tsneedle:optional");
-const PROP_INJECTIONS = Symbol("tsneedle:props");
-const LAZY_PROPS = Symbol("tsneedle:lazy");
-const POST_CONSTRUCT = Symbol("tsneedle:postConstruct");
-const PRE_DESTROY = Symbol("tsneedle:preDestroy");
+const INJECTABLE_META = Symbol("tsinject:injectable");
+const PARAMS_META = Symbol("tsinject:params");
+const OPTIONAL_PARAMS = Symbol("tsinject:optional");
+const PROP_INJECTIONS = Symbol("tsinject:props");
+const LAZY_PROPS = Symbol("tsinject:lazy");
+const POST_CONSTRUCT = Symbol("tsinject:postConstruct");
+const PRE_DESTROY = Symbol("tsinject:preDestroy");
 
 export class MetadataRegistry {
   private static injectableData = new WeakMap<

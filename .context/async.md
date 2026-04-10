@@ -1,6 +1,6 @@
 # Async Resolution
 
-tsneedle distinguishes **synchronous** and **asynchronous** resolution paths. The core algorithm is the same, but factories may return a `Promise<T>` and lifecycle hooks (`@postConstruct`, `@preDestroy`) can be `async`.
+tsinject distinguishes **synchronous** and **asynchronous** resolution paths. The core algorithm is the same, but factories may return a `Promise<T>` and lifecycle hooks (`@postConstruct`, `@preDestroy`) can be `async`.
 
 ---
 

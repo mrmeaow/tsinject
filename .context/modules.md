@@ -7,7 +7,7 @@ Modules let you **declare** a set of providers (and optionally imports/exports) 
 ## Defining a module
 
 ```typescript
-import { defineModule } from 'tsneedle';
+import { defineModule } from 'tsinject';
 import { ILogger, ConsoleLogger } from './logger';
 import { IDatabase, PostgresDB } from './db';
 
@@ -37,7 +37,7 @@ export const DatabaseModule = defineModule({
 ## Loading a module into a container
 
 ```typescript
-import { Container } from 'tsneedle';
+import { Container } from 'tsinject';
 import { DatabaseModule } from './modules/database';
 import { AppModule } from './modules/app';
 
@@ -65,7 +65,7 @@ The `Container.load(module)` method:
 
 ```typescript
 // src/modules/app.ts
-import { defineModule } from 'tsneedle';
+import { defineModule } from 'tsinject';
 import { IUserService, UserService } from '../services/user';
 import { DatabaseModule } from './database';
 

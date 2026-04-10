@@ -3,7 +3,7 @@
 Shows how to control object lifetimes using `Lifecycle` options and the `@singleton`/`@scoped` decorators.
 
 ```typescript
-import { Container, createToken, injectable, singleton, scoped, Lifecycle } from 'tsneedle';
+import { Container, createToken, injectable, singleton, scoped, Lifecycle } from 'tsinject';
 
 // Tokens
 export const IDCounter = createToken<number>('IDCounter');

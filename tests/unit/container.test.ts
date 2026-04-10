@@ -1,4 +1,9 @@
-import { Container, Lifecycle, type Provider, createToken } from "tsneedle";
+import {
+  Container,
+  Lifecycle,
+  type Provider,
+  createToken,
+} from "@mrmeaow/tsinject";
 import { beforeEach, describe, expect, it } from "vitest";
 
 interface IRepo {

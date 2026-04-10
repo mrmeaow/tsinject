@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial implementation of tsneedle DI container
+- Initial implementation of tsinject DI container
 - Token system with branded types
 - Container with registration methods (registerClass, registerFactory, registerValue, registerSingleton)
 - Lifecycle management (Transient, Singleton, Scoped)
@@ -31,4 +31,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TypeScript 5.2+ Stage 3 decorators
 - Strong type safety with branded tokens
 
-[Unreleased]: https://github.com/mrmeaow/tsneedle/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/mrmeaow/tsinject/compare/v0.1.0...HEAD

@@ -1,6 +1,6 @@
 # Scoping
 
-`tsneedle` supports **hierarchical scopes** that let you share singletons across the whole application while keeping request‑level (or custom) scoped instances isolated.
+`tsinject` supports **hierarchical scopes** that let you share singletons across the whole application while keeping request‑level (or custom) scoped instances isolated.
 
 ---
 

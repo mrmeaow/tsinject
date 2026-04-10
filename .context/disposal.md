@@ -37,7 +37,7 @@ class Container {
         // Don't let one disposal failure stop others
         // Log but continue
         console.error(
-          `tsneedle: Error disposing "${entry.token.name}": ${err}`
+          `tsinject: Error disposing "${entry.token.name}": ${err}`
         );
       }
     }

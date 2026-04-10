@@ -1,9 +1,9 @@
 # Example 06 – Circular Dependencies
 
-A minimal case where two services depend on each other. Without `@lazy`, tsneedle would throw a `CircularDependencyError`. Using `@lazy` defers resolution until first use, breaking the cycle.
+A minimal case where two services depend on each other. Without `@lazy`, tsinject would throw a `CircularDependencyError`. Using `@lazy` defers resolution until first use, breaking the cycle.
 
 ```typescript
-import { Container, createToken, injectable, lazy, inject } from 'tsneedle';
+import { Container, createToken, injectable, lazy, inject } from 'tsinject';
 
 // Tokens
 export const IServiceA = createToken<IServiceA>('IServiceA');

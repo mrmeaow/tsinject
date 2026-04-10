@@ -3,7 +3,7 @@
 Demonstrates how to declare reusable modules and load them into a container.
 
 ```typescript
-import { Container, createToken, injectable, defineModule, Lifecycle } from 'tsneedle';
+import { Container, createToken, injectable, defineModule, Lifecycle } from 'tsinject';
 
 // Tokens
 export const ILogger = createToken<ILogger>('ILogger');

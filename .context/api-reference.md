@@ -1,6 +1,6 @@
 # API Reference
 
-The public surface of **tsneedle** is deliberately small and type‑safe. All symbols below are re‑exported from `src/index.ts`.
+The public surface of **tsinject** is deliberately small and type‑safe. All symbols below are re‑exported from `src/index.ts`.
 
 ---
 

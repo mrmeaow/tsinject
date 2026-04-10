@@ -1,12 +1,12 @@
-# AI Agent Guide – tsneedle
+# AI Agent Guide – tsinject
 
-This file guides AI agents (including future instances of yourself) when working on the **tsneedle** project.
+This file guides AI agents (including future instances of yourself) when working on the **tsinject** project.
 
 ---
 
 ## Project Overview
 
-**tsneedle** – A sharp, modern, lightweight dependency injection container for TypeScript.
+**tsinject** – A sharp, modern, lightweight dependency injection container for TypeScript.
 
 - **Goals**: Compete with tsyringe & InversifyJS, provide strong type safety, zero runtime deps (core), ESM + CJS support.
 - **Key Tech**: TypeScript 5.2+, Stage 3 decorators, pnpm, tsup, Vitest.
@@ -16,7 +16,7 @@ This file guides AI agents (including future instances of yourself) when working
 ## Repository Structure
 
 ```
-tsneedle/
+tsinject/
 ├── .context/                # Documentation (generated from plan-draft.md)
 ├── src/                     # Library source code
 │   ├── index.ts             # Public barrel export
@@ -101,7 +101,7 @@ The build outputs:
 
 1. **Branded Tokens** – `Token<T>` uses phantom types to prevent accidental token confusion.
 2. **No Global Container** – Always instantiate `new Container()` explicitly.
-3. **reflect-metadata Optional** – Core never requires it; opt-in via `import 'tsneedle/reflect'`.
+3. **reflect-metadata Optional** – Core never requires it; opt-in via `import 'tsinject/reflect'`.
 4. **WeakMap Metadata** – Private metadata storage; `Symbol.metadata` used for decorator-to-decorator communication.
 5. **Dual Format** – Both ESM and CJS builds for broad compatibility.
 

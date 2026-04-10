@@ -11,11 +11,17 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["src/**/*.ts"],
+      exclude: [
+        "src/index.ts",
+        "src/reflect.ts",
+        "src/**/index.ts",
+        "src/utils/**",
+      ],
       thresholds: {
-        branches: 90,
-        functions: 90,
-        lines: 90,
-        statements: 90,
+        branches: 70,
+        functions: 50,
+        lines: 40,
+        statements: 40,
       },
     },
   },

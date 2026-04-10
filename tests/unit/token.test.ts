@@ -1,4 +1,4 @@
-import { type Token, createToken } from "tsneedle";
+import { type Token, createToken } from "@mrmeaow/tsinject";
 import { describe, expect, it } from "vitest";
 
 describe("Token", () => {
@@ -23,7 +23,7 @@ describe("Token", () => {
   it("should have a brand symbol", () => {
     const token = createToken<unknown>("Branded");
     const brandKey = Object.getOwnPropertySymbols(token)[0]!;
-    expect(brandKey.description).toBe("tsneedle/token");
+    expect(brandKey.description).toBe("tsinject/token");
   });
 });
 

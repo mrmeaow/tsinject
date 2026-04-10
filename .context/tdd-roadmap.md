@@ -1,4 +1,4 @@
-# TDD Roadmap – tsneedle DI Container
+# TDD Roadmap – tsinject DI Container
 
 This document maps the implementation to test-driven development phases. Each phase follows the pattern: **write failing tests → implement → green → refactor**.
 
@@ -315,7 +315,7 @@ This document maps the implementation to test-driven development phases. Each ph
 
 **Tests to write:**
 - `tests/compatibility/reflect-metadata/auto-inference.test.ts`
-  - Importing `tsneedle/reflect` enables reflect mode
+  - Importing `tsinject/reflect` enables reflect mode
   - When enabled, falls back to `design:paramtypes` for missing `@inject`
   - Only works for concrete classes, not interfaces
 
@@ -420,4 +420,4 @@ pnpm vitest run tests/integration
 
 ---
 
-*This plan is the authoritative guide for implementing tsneedle via TDD. Update as implementation reveals new insights.*
+*This plan is the authoritative guide for implementing tsinject via TDD. Update as implementation reveals new insights.*

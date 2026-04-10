@@ -4,7 +4,7 @@ import {
   type Provider,
   type RegisterOptions,
   createToken,
-} from "tsneedle";
+} from "@mrmeaow/tsinject";
 import { describe, expect, it, vi } from "vitest";
 
 interface IRepo {
@@ -93,4 +93,4 @@ describe("Binding type", () => {
 });
 
 // Helper function - need to import from binding module
-import { createBinding } from "tsneedle";
+import { createBinding } from "@mrmeaow/tsinject";

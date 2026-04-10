@@ -1,4 +1,9 @@
-import { Container, Lifecycle, ResolutionError, createToken } from "tsneedle";
+import {
+  Container,
+  Lifecycle,
+  ResolutionError,
+  createToken,
+} from "@mrmeaow/tsinject";
 import { beforeEach, describe, expect, it } from "vitest";
 
 interface ILogger {

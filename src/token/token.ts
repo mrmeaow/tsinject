@@ -1,4 +1,4 @@
-const __token_brand: unique symbol = Symbol("tsneedle/token");
+const __token_brand: unique symbol = Symbol("tsinject/token");
 
 export interface Token<T> {
   readonly [__token_brand]: typeof __token_brand;
@@ -7,7 +7,7 @@ export interface Token<T> {
 }
 
 export function createToken<T>(name: string): Token<T> {
-  const key = Symbol(`tsneedle:${name}`);
+  const key = Symbol(`tsinject:${name}`);
   return Object.freeze({
     [__token_brand]: __token_brand,
     name,

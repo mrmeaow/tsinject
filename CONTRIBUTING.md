@@ -1,4 +1,4 @@
-# Contributing to tsneedle
+# Contributing to tsinject
 
 Thank you for your interest in contributing! This guide will help you get started.
 
@@ -6,8 +6,8 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ```bash
 # Clone the repository
-git clone https://github.com/mrmeaow/tsneedle.git
-cd tsneedle
+git clone https://github.com/mrmeaow/tsinject.git
+cd tsinject
 
 # Install dependencies
 pnpm install

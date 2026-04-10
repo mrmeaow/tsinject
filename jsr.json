@@ -1,5 +1,5 @@
 {
-  "name": "@mrmeaow/tsneedle",
+  "name": "@mrmeaow/tsinject",
   "version": "0.1.0",
   "exports": "./dist/index.js",
   "publish": {

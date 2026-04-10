@@ -1,4 +1,9 @@
-import { AsyncFactoryError, Container, Lifecycle, createToken } from "tsneedle";
+import {
+  AsyncFactoryError,
+  Container,
+  Lifecycle,
+  createToken,
+} from "@mrmeaow/tsinject";
 import { beforeEach, describe, expect, it } from "vitest";
 
 interface IDataService {

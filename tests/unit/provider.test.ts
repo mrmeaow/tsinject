@@ -4,9 +4,9 @@ import type {
   FactoryProvider,
   Provider,
   ValueProvider,
-} from "tsneedle";
-import { Lifecycle } from "tsneedle";
-import { createToken } from "tsneedle";
+} from "@mrmeaow/tsinject";
+import { Lifecycle } from "@mrmeaow/tsinject";
+import { createToken } from "@mrmeaow/tsinject";
 import { describe, expect, it } from "vitest";
 
 interface IRepo {

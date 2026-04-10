@@ -297,7 +297,7 @@ export class Container {
       } catch (err: unknown) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (globalThis as any).console?.error(
-          `tsneedle: Error disposing "${entry.token.name}": ${err}`,
+          `tsinject: Error disposing "${entry.token.name}": ${err}`,
         );
       }
     }

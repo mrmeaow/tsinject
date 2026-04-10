@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
+import { AsyncFactoryError } from "../../src/errors/async-factory-error.js";
 import { CircularDependencyError } from "../../src/errors/circular-dependency-error.js";
 import { DisposedContainerError } from "../../src/errors/disposed-container-error.js";
 import { ResolutionError } from "../../src/errors/resolution-error.js";
-import { AsyncFactoryError } from "../../src/errors/async-factory-error.js";
 import { createToken } from "../../src/token/token.js";
 
 describe("Error Classes", () => {

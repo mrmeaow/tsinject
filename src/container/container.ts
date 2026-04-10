@@ -86,7 +86,11 @@ export class Container {
     const binding = this.getBinding(token);
     if (!binding) {
       const registered = this.getRegisteredTokenNames();
-      throw new ResolutionError(token, this.getScopePath(), registered as unknown[]);
+      throw new ResolutionError(
+        token,
+        this.getScopePath(),
+        registered as unknown[],
+      );
     }
 
     // Check circular dependency
@@ -166,7 +170,11 @@ export class Container {
     const binding = this.getBinding(token);
     if (!binding) {
       const registered = this.getRegisteredTokenNames();
-      throw new ResolutionError(token, this.getScopePath(), registered as unknown[]);
+      throw new ResolutionError(
+        token,
+        this.getScopePath(),
+        registered as unknown[],
+      );
     }
 
     // Check circular dependency

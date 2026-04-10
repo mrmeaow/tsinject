@@ -12,16 +12,21 @@ export class ResolutionError extends Error {
     scopePath: string[] = [],
     registeredTokens: unknown[] = [],
   ) {
-    const tokenName = typeof token === "object" && token !== null && "name" in token
-      ? String(token.name)
-      : String(token);
-    const scopeStr = scopePath.length > 0 ? ` in scopes [${scopePath.join(" → ")}]` : "";
+    const tokenName =
+      typeof token === "object" && token !== null && "name" in token
+        ? String(token.name)
+        : String(token);
+    const scopeStr =
+      scopePath.length > 0 ? ` in scopes [${scopePath.join(" → ")}]` : "";
     const registeredNames = registeredTokens.map((t) =>
-      typeof t === "object" && t !== null && "name" in t ? String(t.name) : String(t)
+      typeof t === "object" && t !== null && "name" in t
+        ? String(t.name)
+        : String(t),
     );
-    const hint = registeredNames.length > 0
-      ? `\nHint: Did you forget to register "${tokenName}" in this container?`
-      : "";
+    const hint =
+      registeredNames.length > 0
+        ? `\nHint: Did you forget to register "${tokenName}" in this container?`
+        : "";
     super(`No binding found for token "${tokenName}"${scopeStr}${hint}`);
     this.name = "ResolutionError";
   }

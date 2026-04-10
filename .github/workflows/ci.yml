@@ -108,6 +108,28 @@ jobs:
       - name: Bump version and create release
         id: release
         run: |
+          # Create config inline to avoid fetching from main branch
+          cat > release-please-config.dev.json <<'EOF'
+          {
+            "release-type": "node",
+            "packages": {
+              ".": {
+                "package-name": "@mrmeaow/tsinject",
+                "changelog-path": "CHANGELOG.md",
+                "prerelease": true,
+                "prerelease-type": "dev",
+                "versioning": "prerelease"
+              }
+            },
+            "changelog-path": "CHANGELOG.md",
+            "include-component-in-tag": false,
+            "includeVInTag": true,
+            "prerelease": true,
+            "bump-minor-pre-major": true,
+            "bump-patch-for-minor-pre-major": true
+          }
+          EOF
+
           # Run release-please to bump version and create release
           # It will update package.json, CHANGELOG.md, and manifest
           npx release-please github-release \
@@ -173,6 +195,27 @@ jobs:
       - name: Bump version and create release
         id: release
         run: |
+          cat > release-please-config.next.json <<'EOF'
+          {
+            "release-type": "node",
+            "packages": {
+              ".": {
+                "package-name": "@mrmeaow/tsinject",
+                "changelog-path": "CHANGELOG.md",
+                "prerelease": true,
+                "prerelease-type": "next",
+                "versioning": "prerelease"
+              }
+            },
+            "changelog-path": "CHANGELOG.md",
+            "include-component-in-tag": false,
+            "includeVInTag": true,
+            "prerelease": true,
+            "bump-minor-pre-major": true,
+            "bump-patch-for-minor-pre-major": true
+          }
+          EOF
+
           npx release-please github-release \
             --token=${{ secrets.GITHUB_TOKEN }} \
             --repo-url=${{ github.server_url }}/${{ github.repository }} \

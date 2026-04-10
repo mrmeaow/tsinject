@@ -259,6 +259,7 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          skip-github-pull-request: true
 
       - uses: actions/checkout@v4
         with:

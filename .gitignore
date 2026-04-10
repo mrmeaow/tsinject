@@ -11,3 +11,5 @@ coverage/
 # Custom
 .qwen
 urgent.md
+# Coverage output
+coverage/

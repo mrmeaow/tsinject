@@ -1,10 +1,10 @@
-import { describe, expect, it, vi, beforeEach } from "vitest";
 import {
   Container,
-  createToken,
   Lifecycle,
+  createToken,
   defineModule,
 } from "@mrmeaow/tsinject";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("Container - Full Async Coverage", () => {
   let container: Container;

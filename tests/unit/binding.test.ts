@@ -1,5 +1,10 @@
-import { describe, expect, it, vi, beforeEach } from "vitest";
-import { Container, createToken, Lifecycle, defineModule } from "@mrmeaow/tsinject";
+import {
+  Container,
+  Lifecycle,
+  createToken,
+  defineModule,
+} from "@mrmeaow/tsinject";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("Binding & Provider Types", () => {
   describe("createBinding", () => {
@@ -14,7 +19,9 @@ describe("Binding & Provider Types", () => {
       const Token = createToken<object>("Class");
       class Service {}
       const container = new Container();
-      container.registerClass(Token, Service, { lifecycle: Lifecycle.Singleton });
+      container.registerClass(Token, Service, {
+        lifecycle: Lifecycle.Singleton,
+      });
       const a = container.resolve(Token);
       const b = container.resolve(Token);
       expect(a).toBe(b);

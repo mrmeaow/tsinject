@@ -1,9 +1,5 @@
-import { describe, expect, it, vi, beforeEach } from "vitest";
-import {
-  Container,
-  createToken,
-  Lifecycle,
-} from "@mrmeaow/tsinject";
+import { Container, Lifecycle, createToken } from "@mrmeaow/tsinject";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 describe("Container - 90% Async Coverage", () => {
   let container: Container;
